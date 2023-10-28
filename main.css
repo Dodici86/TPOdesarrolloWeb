@@ -1,39 +1,28 @@
 P {
     font-size : 12pt;
-    
     font-family : arial,helvetica;
-    
     font-weight : normal;    
     }
     
 H1 {
     font-size : 36pt;
-    
     font-family : verdana,arial;
-    
     text-decoration : underline;
-    
     text-align : center;
-    
     background-color : Teal; 
     }
     
 TD {  
     font-size : 10pt;
-    
     font-family : verdana,arial;
-    
     text-align : center;
-    
     background-color : 666666;
     }
     
 BODY { 
 
     background-color : #e9c0d2;
-    
     font-family : arial;
-    
     color : rgb(0, 0, 0);
     }
 
@@ -60,6 +49,29 @@ html
     background-color: gainsboro;
     width: 25%;
     margin: 10px;
+    text-align: center;
+    /* line-height: 75px; 
+    font-size: 30px; */
+    border: 2px solid black
+}
+
+.flex-container-nav {
+    display: flex;
+    /* flex-direction: row;  en columna */
+    flex-flow:row ; /* las box pasan al siguiente renglon */
+    justify-content: center;
+    align-items: center;
+    align-items: stretch; /* usa tola la altura que se pueda*/
+    /* align-content: stretch; */
+    background-color: burlywood;
+    padding: 5px; 
+    border: 2px solid black
+}
+
+.flex-container-nav div{
+    background-color: gainsboro;
+    width: 25%;
+    margin: 5px;
     text-align: center;
     /* line-height: 75px; 
     font-size: 30px; */
