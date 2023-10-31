@@ -1,15 +1,80 @@
+body {
+    font-family: Georgia, Times, serif;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.3em;
+    margin:0;
+}
+
+.header { 
+    background: #edc0c0;
+    color: black;
+    padding: 2rem 0;
+
+    /*position: fixed;
+    left: 0 ;
+    top: 0;
+    right: 0;
+     agregar relleno a  main { padding-top: 12rem; } */
+}
+
+    .header a {
+        color: brown;
+        text-decoration: none;
+    }
+.logo { 
+    letter-spacing: 10px ;
+    font-size: 1.2em;}
+
+.navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .navigation ul li {
+        display: block;
+    }
+    .navigation ul li a { 
+        display: block;
+        padding: 0.5rem 1 rem;
+        transition: all 0.4s linear;
+    }
+    .navigation ul li a hover {
+        background: #4a4a4a;
+    }
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    background: #f2f2f2;
+    padding: 0.5rem 0;
+    text-align: center;
+    margin-top: 5rem;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 P {
+    margin-bottom: 1.6em;
     font-size : 12pt;
     font-family : arial,helvetica;
     font-weight : normal;    
     }
     
 H1 {
-    font-size : 36pt;
+    font-size : 2rem;
+    line-height: 1.3rem;
     font-family : verdana,arial;
-    text-decoration : underline;
+ /*   text-decoration : underline;  */
     text-align : center;
-    background-color : Teal; 
+ /*   background-color : Teal;  */
     }
     
 TD {  
@@ -29,6 +94,12 @@ BODY {
 html
     {
     box-sizing: border-box;
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .flex-container{
@@ -63,13 +134,13 @@ html
     align-items: center;
     align-items: stretch; /* usa tola la altura que se pueda*/
     /* align-content: stretch; */
-    background-color: burlywood;
+    /* background-color: burlywood; */
     padding: 5px; 
     border: 2px solid black
 }
 
 .flex-container-nav div{
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
     width: 25%;
     margin: 5px;
     text-align: center;
@@ -77,3 +148,33 @@ html
     font-size: 30px; */
     border: 2px solid black
 }
+
+/*
+@media only screen and (max-with :1024px) {
+.navigation{ 
+    width: 100%;
+    margin-top: 1rem;
+    }
+
+    .navigation ul li {
+        display: block;
+    }
+    .navigation ul li a { 
+        display: block;
+        padding: 0.5rem 0 ;
+        transition: all 0.4s linear;
+    }
+    .navigation ul li a hover {
+        background: #4a4a4a;
+    }
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+}
+*/

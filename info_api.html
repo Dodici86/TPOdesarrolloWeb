@@ -4,64 +4,77 @@
 <head>
     <meta charset='utf-8'>
   
-    <title> Estudio Jurídico - Contacto </title>
+    <title> Estudio Jurídico </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet'  href='main.css'> <!-- type='text/css' media='screen' -->
     <script src='main.js'></script>
+
+    <script>
+
+        function traer(){
+            var x=document.getElementsByClassName("ejemplo")
+            fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+            .then(res=> res.json())
+            .then(data=>{
+                x[0].innerHTML=data[0].casa.nombre+": "+data[0].casa.compra
+                x[1].innerHTML=data[1].casa.nombre+": "+data[1].casa.compra
+                x[2].innerHTML=data[2].casa.nombre+": "+data[2].casa.compra
+                x[3].innerHTML=data[3].casa.nombre+": "+data[3].casa.compra
+
+                
+            })
+
+            
+        }
+    </script>
+
 </head>
-  
-<body >  
+<!-- <a href="https://www.freepik.es/vector-gratis/icono-escala-equilibrio-justicia-legal_36433979.htm#page=2&query=LEGAL&position=30&from_view=search&track=sph">Imagen de brgfx</a> en Freepik -->  
+<body class="body">  
     <header class="header"> 
         <div class ="container logo-nav-container">
             <a href="#"class="logo"> <img src="Imagenes/Balanza.jpg" width=50px height=50px> Estudio Jurídico </a>
         <nav class="navigation"> 
-           
                 <ul>
                     <li> <a href="index.html"> Inicio </a>                   </li>
                     <li> <a href="info_api.html"> Información de interes </a>                   </li>
                     <li> <a href="contacto.html"> Contacto </a>                   </li>
                     <li> <a href="acercade.html"> Acerca de </a>                   </li>
                 </ul>
-            <!-- <div class="flex-container-nav" >                 </div> -->               
-        </nav> 
+        
     </header> 
 
+   
+
+
+<main class="main"> 
+    <div  class="container">
+
+        <div class="navigation" >
+            <ul>
+                <li>    <button onclick="traer()"> Cotizar Dolar</button>    </li>
+                <li>    <div class="ejemplo"></div>    </li>
+                <li>    <div class="ejemplo"></div>    </li>
+                <li>    <div class="ejemplo"></div>    </li>
+                <li>    <div class="ejemplo"></div>    </li>
+            </ul>
+        </div>
+      
+        </div>
+    
+
+    <aside>
+        
+    </aside>
+</main>    
+    
 <menu>
-    <table border="5" align="center" >
-        <tr>
-            <td> 
-            <b>Información de contacto</b> 
-            </td>
-            
-            <td>
-               <b> Envienos su consulta </b>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div align="left">
-                <p> San Pedro Buenos Aires Argentina </p>
-                <p> 3329 469911 </p>
-                <p> info@gmail.com </p>
-                <p> web estudio </p> 
-                </div>
-                </td> 
-            <td>
-                <div align="left">
-                <p>Nombre: _______ Apellido: ______</p>
-                <p>Direccion:</p>
-                <p>Telefono:</p>
-                <p>Conslta:</p>
-                <p></p>
-                <p>Boton Enviar</p>
-                </div>
-            </td>
-        </tr>
-    </table>
+
 </menu>
 
 <footer class = "footer">
     <div class = "container" >
+
     <div class="navigation footer-container">
         <div >
             <h4>Abogada Fiodorov </h4>

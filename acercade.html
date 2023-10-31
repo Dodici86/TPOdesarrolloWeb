@@ -10,16 +10,22 @@
     <script src='main.js'></script>
 </head>
   
-<body background="fondo.jpg">
-    <header style="background-color: cornflowerblue;"> 
-         <nav> <table border="0"> <tr> 
-            <td> <b>  <a style="background-color: rgb(144, 143, 215);"  href="index.html" >  Home       </a> </b> </td>
-            <td> <b>  <a style="background-color: rgb(144, 143, 215);" href="acercade.html" > Acerca de </a>  </b> </td>
-            <td> <b>  <a style="background-color: rgb(144, 143, 215);" href="contacto.html" > Contacto  </a>   </b> </td>
-         </tr> </table>
-         <p > <h1><center> Estudio Jurídico </center> </h1> </p> 
-        </nav>
+<body >  
+    <header class="header"> 
+        <div class ="container logo-nav-container">
+            <a href="#"class="logo"> <img src="Imagenes/Balanza.jpg" width=50px height=50px> Estudio Jurídico </a>
+        <nav class="navigation"> 
+           
+                <ul>
+                    <li> <a href="index.html"> Inicio </a>                   </li>
+                    <li> <a href="info_api.html"> Información de interes </a>                   </li>
+                    <li> <a href="contacto.html"> Contacto </a>                   </li>
+                    <li> <a href="acercade.html"> Acerca de </a>                   </li>
+                </ul><div> <b>  </b> </div>
+            <!-- <div class="flex-container-nav" >                 </div> -->               
+        </nav> 
     </header> 
+
 
 <menu>
     <table border="5"  >
@@ -32,9 +38,38 @@
     </table>
 </menu>
 
-<footer> 
-    <p > <h3><center> Barra inferior - Carugati @2023 </center></h3></p>
+<footer class = "footer">
+    <div class = "container" >
+
+    <div class="navigation footer-container">
+        <div >
+            <h4>Abogada Fiodorov </h4>
+            <p>Cuente con el respaldo que sólo los <br>
+                profesionales pueden garantizarle.</p>
+        </div>
+        <div >
+            <h4>Navegar</h4>
+            <ul>
+                <li> <a href="index.html"> Inicio </a>                   </li>
+                <li> <a href="info_api.html"> Información de interes </a>                   </li>
+                <li> <a href="contacto.html"> Contacto </a>                   </li>
+                <li> <a href="acercade.html"> Acerca de </a>                   </li>
+            </ul>
+        </div>
+
+        <div >
+            <h4>Informacion de contacto</h4>
+            <ul >
+                <li>San Pedro, <br>  Buenos Aires Argentina</li>
+                <li><a href="tel://0332915469911">(03329) (15) 469911</a></li>
+                <li><a href="mailto:info@gmail.com.ar">info@gmail.com</a></li>
+            </ul>
+        </div>	
+    </div>
+      <p > <h4> Carugati @2023</h4></p>
+    </div>
 </footer>
+    
     
 
 </body>
