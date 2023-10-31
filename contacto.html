@@ -5,6 +5,24 @@
     <meta charset='utf-8'>
   
     <title> Estudio Jurídico - Contacto </title>
+
+    <script>
+        function obtenerTag(){
+            var x=document.getElementsByName("fname")[1].tagName
+            document.getElementById("demo").innerHTML=x
+        }
+        function obtenerValor(){
+            var y=document.getElementsByName("fname")[0].value
+            document.getElementById("demo2").innerHTML=y
+        }
+
+        function obtenerElemento(){
+            var z=document.getElementsByTagName("li")
+            var a=document.getElementsByName("seleccion")[0].value-1
+            document.getElementById("demo3").innerHTML=z[a].innerHTML
+        }
+    </script>
+
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -27,7 +45,7 @@
     </header> 
 
 <menu>
-    <table border="5" align="center" >
+    <table border="0" align="center" >
         <tr>
             <td> 
             <b>Información de contacto</b> 
@@ -47,17 +65,34 @@
                 </div>
                 </td> 
             <td>
-                <div align="left">
-                <p>Nombre: _______ Apellido: ______</p>
-                <p>Direccion:</p>
-                <p>Telefono:</p>
-                <p>Conslta:</p>
-                <p></p>
-                <p>Boton Enviar</p>
+                <div class="navigation" > 
+                    <form>    
+           
+                    <ul>
+                        <li>Nombre:     <input name="fname" type="text" value="Ariel"> </li>
+                        <li>Apellido:   <input name="fname" type="text" value="Carugati"></li>
+                        <li>Direccion:  <input name="fname" type="text" value="Calle Falsa 123"></li>
+                        <li>Telefono:   <input name="fname" type="text" value="3329"></li>
+                        <li>Conslta:    <input name="fname" type="text" value="Escriba si consulta aquí."></li>
+               
+                    </form>
+                    <br>
+                    <li><button onclick="obtenerTag()">Tag</button>   </li>
+                    <li><button onclick="obtenerValor()">Valor</button> </li>
+
+                    <br>
+                        <li id="demo"> </li>
+                        <li id="demo2"> </li>
+                    </ul>
+                    
+
                 </div>
             </td>
         </tr>
     </table>
+                    <p id="demo"> </p>
+                    <p id="demo2"> </p>
+                    <p id="demo3"> </p>
 </menu>
 
 <footer class = "footer">
@@ -90,7 +125,6 @@
       <p > <h4> Carugati @2023</h4></p>
     </div>
 </footer>
-    
 
 </body>
 </html>
