@@ -6,23 +6,6 @@
   
     <title> Estudio Jurídico - Contacto </title>
 
-    <script>
-        function obtenerTag(){
-            var x=document.getElementsByName("fname")[1].tagName
-            document.getElementById("demo").innerHTML=x
-        }
-        function obtenerValor(){
-            var y=document.getElementsByName("fname")[0].value
-            document.getElementById("demo2").innerHTML=y
-        }
-
-        function obtenerElemento(){
-            var z=document.getElementsByTagName("li")
-            var a=document.getElementsByName("seleccion")[0].value-1
-            document.getElementById("demo3").innerHTML=z[a].innerHTML
-        }
-    </script>
-
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='script.js'></script>
@@ -51,48 +34,86 @@
             <b>Información de contacto</b> 
             </td>
             
+            <td>    </td>
+            
             <td>
                <b> Envienos su consulta </b>
             </td>
         </tr>
+        
         <tr>
             <td>
                 <div align="left">
-                <p> San Pedro Buenos Aires Argentina </p>
+                <p> San Pedro Buenos Aires Argentina        </p>
                 <p> 3329 469911 </p>
                 <p> info@gmail.com </p>
                 <p> web estudio </p> 
                 </div>
                 </td> 
-            <td>
+
+                <td>    </td>
+
+             <td>
                 <div class="navigation" > 
-                    <form>    
+                    <form action="" name="formulario" method="get">    
            
                     <ul>
-                        <li>Nombre:     <input name="fname" type="text" value="Ariel"> </li>
-                        <li>Apellido:   <input name="fape" type="text" value="Carugati"></li>
-                        <li>Direccion:  <input name="fdirec" type="text" value="Calle Falsa 123"></li>
-                        <li>Telefono:   <input name="fcell" type="text" value="3329"></li>
-                        <li>Conslta:    <input name="fconsulta" type="text" value="Escriba si consulta aquí."></li>
-               
+                        <li><label for="name"> Nombre Completo: <span>*</span> </label> 
+                            <input name="name" type="text"  type="text" id="name" placeholder="Cosme Fulanito">
+                        </li>
+                        <li><label for="email"> Correo Electrónico: <span>*</span></label>  
+                            <input name="email" type="email"  type="text" id="email" spellcheck="false" placeholder="tumail@tudominio.com" ></li>
+                        <li ><label for="mensaje"> Mensaje: <span>*</span></label> </li>
+                        <li>
+                            <textarea id="mensaje" name="mensaje" cols="40" rows="5"></textarea>
+                        </li>
+                        <li><button type="submit" id="boton" name="boton" >Enviar</button>  
+                        </li>
                     </form>
-                    <br>
-                    <li><button onclick="obtenerTag()">Tag</button>   </li>
-                    <li><button onclick="obtenerValor()">Valor</button> </li>
-
-                    <br>
-                        <li id="demo"> </li>
-                        <li id="demo2"> </li>
                     </ul>
-                    
+
+                    <script>
+                        (function(){
+                         //Variables
+                         var formulario = document.getElementsByName('formulario')[0],
+                            elementos = formulario.elements,
+                            btn = document.getElementById('boton');
+                         var validarNombre = function(e){
+                         if (formulario.name.value == 0){
+                         alert("Completa el campo nombre");
+                         e.preventDefault();
+                         }
+                         };
+                 
+                         var validarEmail = function(e){
+                            if (formulario.email.value == 0){
+                         alert("Completa el campo con un mail");
+                         e.preventDefault();
+                         }
+                         };
+                         var validarMensaje = function(e){
+                         if (formulario.mensaje.value == 0){
+                         alert("Por favot ungresa una consulta");
+                         e.preventDefault();
+                         }
+                         };
+
+                         var validar = function(e){
+                         validarNombre(e);
+                         validarEmail(e)
+                         validarMensaje(e)
+                         };
+                 
+                         formulario.addEventListener("submit", validar);
+                         }())
+                     </script>
+                 
 
                 </div>
             </td>
         </tr>
     </table>
-                    <p id="demo"> </p>
-                    <p id="demo2"> </p>
-                    <p id="demo3"> </p>
+                    
 </menu>
 
 <footer class = "footer">
